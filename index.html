@@ -11,11 +11,11 @@
 </head>
 <body>
     <!-- Contenitore che rende la pagina 100vh. E' in display: flex, direction column -->
-    <div class="app-container">
+    <div class="app-container column">
         <!-- Blocco superiore con grow attivo. Display: flex -->
-        <div>
+        <div class="grow row">
             <!-- Sidebar con width fissa e shrink 0. A sua volta è un flex con direzione column-->
-            <div>
+            <div class="sidebar no-shrink">
                 <!-- Logo -->
                 <div></div>
                 <!-- Menu di navigazione -->
@@ -26,9 +26,9 @@
                 <div></div>
             </div>
             <!-- Vero contenuto con grow 1 -->
-            <div>
+            <div class="content-container grow">
                 <!-- Barra superiore in fixed -->
-                <div></div>
+                <div class="top-bar"></div>
                 <!-- Recently played -->
                 <div></div>
                 <!-- Creato per John Doe -->
@@ -38,8 +38,13 @@
             </div>
         </div>
         <!-- Barra inferiore con i controlli. Lo shrink è 0 per evitare che si schiacci -->
-        <div>
-
+        <div class="bottom-bar no-shrink row space-between">
+            <!-- Contenitore con immagine, nome brano e pulsanti vicini -->
+            <div class="no-shrink"></div>
+            <!-- Contenitore dei controlli audio -->
+            <div class="controls-container col-30"></div>
+            <!-- Contenitore dello slider del volume e pulsanti vicini -->
+            <div class="no-shrink"></div>
         </div>
     </div>
 </body>
