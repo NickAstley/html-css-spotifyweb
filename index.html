@@ -7,6 +7,7 @@
     <title>Spotify</title>
     <meta name="description" content="Esercizio di riproduzione di Spotify">
     <meta name="keywords" content="Spotify, esercizio, webapp">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,20 +15,74 @@
     <!-- Contenitore che rende la pagina 100vh. E' in display: flex, direction column -->
     <div class="app-container column">
         <!-- Blocco superiore con grow attivo. Display: flex -->
-        <div class="grow row">
+        <div class="grow row overflow-hidden">
             <!-- Sidebar con width fissa e shrink 0. A sua volta è un flex con direzione column-->
-            <div class="sidebar no-shrink">
+            <div class="sidebar no-shrink column gap-default">
                 <!-- Logo -->
-                <div></div>
+                <div>
+                    <img class="logo-img p-sidebar" src="img/logo.svg" alt="Logo Spotify">
+                    <img class="logo-img p-sidebar display-none" src="img/logo-small.svg" alt="Logo Spotify">
+                </div>
                 <!-- Menu di navigazione -->
-                <div></div>
+                <nav>
+                    <ul class="t-bold">
+                        <li>
+                            <a class="row align-center gap-small p-sidebar" href="#">
+                                <img class="nav-icon" src="img/home.svg" alt="icona Home">
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="row align-center gap-small p-sidebar" href="#">
+                                <img class="nav-icon" src="img/search.svg" alt="Icona search">
+                                <span>Cerca</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="row align-center gap-small p-sidebar" href="#">
+                                <img class="nav-icon" src="img/libreria.svg" alt="Icona libreria">
+                                <span>La tua libreria</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
                 <!-- Contenitore delle playlist con grow 1 -->
-                <div></div>
+                <div class="grow t-bold column gap-default overflow-hidden">
+                    <div class="column gap-default p-sidebar">
+                        <span class="t-white">PLAYLIST</span>
+                        <a class="row align-center gap-default" href="#">
+                            <button class="add-btn">+</button>
+                            <span>Crea Playlist</span>
+                        </a>
+                    </div>
+                    <div class="playlist-container grow">
+                        <ul>
+                            <li><a class="p-sidebar" href="#">Nome Playlist</a></li>
+                            <li><a class="p-sidebar" href="#">Nome Playlist</a></li>
+                            <li><a class="p-sidebar" href="#">Nome Playlist</a></li>
+                            <li><a class="p-sidebar" href="#">Nome Playlist</a></li>
+                            <li><a class="p-sidebar" href="#">Nome Playlist</a></li>
+                            <li><a class="p-sidebar" href="#">Nome Playlist</a></li>
+                            <li><a class="p-sidebar" href="#">Nome Playlist</a></li>
+                        </ul>
+                    </div>
+                </div>
                 <!-- Utente e Installa app -->
-                <div></div>
+                <div class="t-bold p-sidebar">
+                    <a class="app-promo row align-center gap-small">
+                        <img class="download-icon" src="img/download.svg" alt="Icona download">
+                        <div>Installa app</div>
+                    </a>
+                    <div class="row align-center gap-small t-white">
+                        <div class="user-img-container overflow-hidden">
+                            <img class="user-img" src="img/profile.svg" alt="Immagine utente">
+                        </div>
+                        <span>John Doe</span>
+                    </div>
+                </div>
             </div>
             <!-- Vero contenuto con grow 1 -->
-            <div class="content-container grow">
+            <div class="main-content-container grow">
                 <!-- Barra superiore in fixed -->
                 <div class="top-bar"></div>
                 <!-- Recently played -->

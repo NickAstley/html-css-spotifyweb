@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -12,14 +12,23 @@ body {
     color: rgba(255, 255, 255, 0.4);
 }
 
-/* Utilities */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* UTILITIES */
 
 .t-white {
     color: white;
 }
 
 .t-bold {
-    font-weight: 600;
+    font-weight: 700;
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
 
 .icon-size-default {
@@ -34,7 +43,16 @@ body {
     font-size: 2.5rem;
 }
 
-/* Flex */
+.p-sidebar {
+    display: block;
+    padding: 0.5rem 1.5rem;
+}
+
+.display-none {
+    display: none;
+}
+
+/* FLEX */
 
 .row {
     display: flex;
@@ -69,6 +87,10 @@ body {
     gap: 1rem;
 }
 
+.gap-small {
+    gap: 0.5rem;
+}
+
 .gap-big {
     gap: 2rem;
 }
@@ -77,24 +99,79 @@ body {
     flex-basis: calc( 100% / 3 );
 }
 
-/* Stili generali */
+/* GENERALI */
 
 .app-container {
     height: 100vh;
 }
 
+/* SIDEBAR */
+
 .sidebar {
     background-color: #000000;
     flex-basis: 250px;
+    font-size: 1.1rem;
+    padding: 1rem 0;
 }
 
-.content-container {
-    background-color: #141922;
+.logo-img {
+    width: 80%;
 }
+
+.nav-icon {
+    width: 35px;
+    filter: opacity(0.4);
+}
+
+.add-btn {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 2.8rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.playlist-container {
+    overflow: auto;
+}
+
+.app-promo {
+    padding: 0.5rem 0;
+    border-bottom: 2px solid;
+    margin-bottom: 1rem;
+}
+
+.download-icon {
+    height: 1.5rem;
+    filter: opacity(0.4);
+}
+
+.user-img-container {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+}
+
+.user-img {
+    background-color: #808080;
+}
+
+/* TOP BAR */
 
 .top-bar {
     background-color: rgba(255, 255, 255, 0.5);
 }
+
+/* MAIN CONTENT */
+
+.main-content-container {
+    background-color: #141922;
+}
+
+/* BOTTOM BAR */
 
 .bottom-bar {
     background-color: #282828;
