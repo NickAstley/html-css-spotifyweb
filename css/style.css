@@ -12,6 +12,28 @@ body {
     color: rgba(255, 255, 255, 0.4);
 }
 
+/* Utilities */
+
+.t-white {
+    color: white;
+}
+
+.t-bold {
+    font-weight: 600;
+}
+
+.icon-size-default {
+    font-size: 1.2rem;
+}
+
+.icon-size-big {
+    font-size: 1.5rem;
+}
+
+.icon-size-bigger {
+    font-size: 2.5rem;
+}
+
 /* Flex */
 
 .row {
@@ -35,6 +57,22 @@ body {
     justify-content: space-between;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.gap-default {
+    gap: 1rem;
+}
+
+.gap-big {
+    gap: 2rem;
+}
+
 .col-30 {
     flex-basis: calc( 100% / 3 );
 }
@@ -43,10 +81,6 @@ body {
 
 .app-container {
     height: 100vh;
-}
-
-.bottom-bar {
-    background-color: #0E0E0E;
 }
 
 .sidebar {
@@ -60,4 +94,35 @@ body {
 
 .top-bar {
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+.bottom-bar {
+    background-color: #282828;
+    padding: 0 1rem;
+}
+
+.playing-img {
+    width: 60px;
+    padding: 2rem 0;
+}
+
+.artist-name {
+    font-size: 0.8rem;
+}
+
+.bar {
+    background-color: #5A5A5A;
+    border-radius: 5px;
+    height: 5px;
+}
+
+.volume-bar {
+    width: 150px;
+}
+
+.bar-progress {
+    background-color: white;
+    width: 20%;
+    height: 100%;
+    border-radius: 5px;
 }

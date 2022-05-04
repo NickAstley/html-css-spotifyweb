@@ -7,6 +7,7 @@
     <title>Spotify</title>
     <meta name="description" content="Esercizio di riproduzione di Spotify">
     <meta name="keywords" content="Spotify, esercizio, webapp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -38,13 +39,51 @@
             </div>
         </div>
         <!-- Barra inferiore con i controlli. Lo shrink è 0 per evitare che si schiacci -->
-        <div class="bottom-bar no-shrink row space-between">
+        <div class="bottom-bar no-shrink row space-between align-center">
             <!-- Contenitore con immagine, nome brano e pulsanti vicini -->
-            <div class="no-shrink"></div>
+            <div class="no-shrink row align-center gap-default">
+                <div>
+                    <img class="playing-img" src="img/sinister.jpeg" alt="Sinister OST">
+                </div>
+                <div class="t-bold">
+                    <div class="t-white">Sinister</div>
+                    <div class="artist-name">Brano Nome</div>
+                </div>
+                <div class="row icon-size-default gap-default">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div>
+            </div>
             <!-- Contenitore dei controlli audio -->
-            <div class="controls-container col-30"></div>
+            <div class="column gap-default col-30">
+                <!-- Riga superiore -->
+                <div class="row justify-center align-center gap-big t-white icon-size-big">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-regular fa-circle-play icon-size-bigger"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-rotate-right"></i>
+                </div>
+                <!-- Riga inferiore -->
+                <div class="row align-center gap-big">
+                    <div class="t-white">0:25</div>
+                    <div class="bar grow">
+                        <div class="bar-progress"></div>
+                    </div>
+                    <div class="t-white">4:35</div>
+                </div>
+            </div>
             <!-- Contenitore dello slider del volume e pulsanti vicini -->
-            <div class="no-shrink"></div>
+            <div class="no-shrink row align-center gap-default">
+                <div class="row gap-default t-white icon-size-default">
+                    <i class="fa-solid fa-list-ul"></i>
+                    <i class="fa-solid fa-display"></i>
+                    <i class="fa-solid fa-volume-high"></i>
+                </div>
+                <div class="bar volume-bar">
+                    <div class="bar-progress"></div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
