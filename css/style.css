@@ -17,6 +17,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+}
+
 /* UTILITIES */
 
 .t-white {
@@ -25,6 +29,14 @@ a {
 
 .t-bold {
     font-weight: 700;
+}
+
+.t-uppercase {
+    text-transform: uppercase;
+}
+
+.hover-white:hover {
+    color: white;
 }
 
 .overflow-hidden {
@@ -118,6 +130,10 @@ a {
     width: 80%;
 }
 
+.nav-link:hover .nav-icon {
+    filter: opacity(1);
+}
+
 .nav-icon {
     width: 35px;
     filter: opacity(0.4);
@@ -134,14 +150,22 @@ a {
     cursor: pointer;
 }
 
+.add-btn-container:hover .add-btn {
+    background-color: white;
+}
+
 .playlist-container {
     overflow: auto;
 }
 
 .app-promo {
     padding: 0.5rem 0;
-    border-bottom: 2px solid;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
     margin-bottom: 1rem;
+}
+
+.app-promo:hover .download-icon {
+    filter: opacity(1);
 }
 
 .download-icon {
@@ -161,8 +185,23 @@ a {
 
 /* TOP BAR */
 
+/* NEEDS FIXEEEEEEEEEEEEEEEEEEEEEEED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .top-bar {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    text-align: right;
+}
+
+.upgrade-btn {
+    font-size: 1rem;
+    display: inline-block;
+    border-radius: 50px;
+    border: 2px solid white;
+    padding: 0.5rem 2rem;
+}
+
+.upgrade-btn:hover {
+    transform: scale(1.1);
 }
 
 /* MAIN CONTENT */
@@ -171,11 +210,39 @@ a {
     background-color: #141922;
 }
 
+.category-container {
+    text-align: center;
+}
+
+.category-name-container {
+    display: inline-block;
+    padding: 1rem;
+}
+
+.category-name {
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.category-name.active:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -0.3rem;
+    transform: translate(-50%, 0%);
+    width: calc( 100% / 3 );
+    border: 1px solid #ADFF2F;
+}
+
 /* BOTTOM BAR */
 
 .bottom-bar {
     background-color: #282828;
     padding: 0 1rem;
+}
+
+.bottom-bar i {
+    cursor: pointer;
 }
 
 .playing-img {
@@ -187,10 +254,27 @@ a {
     font-size: 0.8rem;
 }
 
+.artist-name:hover {
+    text-decoration: underline;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+}
+
 .bar {
     background-color: #5A5A5A;
     border-radius: 5px;
     height: 5px;
+    cursor: pointer;
+}
+
+.bar:hover .bar-progress {
+    background-color: #ADFF2F;
+}
+
+.bar:hover .bar-progress-circle {
+    display: block;
 }
 
 .volume-bar {
@@ -202,4 +286,16 @@ a {
     width: 20%;
     height: 100%;
     border-radius: 5px;
+    position: relative;
+}
+
+.bar-progress-circle {
+    display: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: -8px;
+    top: -5px;
 }

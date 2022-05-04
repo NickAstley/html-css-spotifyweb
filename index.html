@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Contenitore che rende la pagina 100vh. E' in display: flex, direction column -->
+    <!-- Contenitore 100vh -->
     <div class="app-container column">
-        <!-- Blocco superiore con grow attivo. Display: flex -->
+        <!-- Blocco superiore -->
         <div class="grow row overflow-hidden">
-            <!-- Sidebar con width fissa e shrink 0. A sua volta è un flex con direzione column-->
+            <!-- Sidebar -->
             <div class="sidebar no-shrink column gap-default">
                 <!-- Logo -->
                 <div>
@@ -27,64 +27,94 @@
                 <nav>
                     <ul class="t-bold">
                         <li>
-                            <a class="row align-center gap-small p-sidebar" href="#">
+                            <!-- Home -->
+                            <a class="nav-link row align-center gap-small p-sidebar hover-white" href="#">
                                 <img class="nav-icon" src="img/home.svg" alt="icona Home">
                                 <span>Home</span>
                             </a>
                         </li>
                         <li>
-                            <a class="row align-center gap-small p-sidebar" href="#">
+                            <!-- Cerca -->
+                            <a class="nav-link row align-center gap-small p-sidebar hover-white" href="#">
                                 <img class="nav-icon" src="img/search.svg" alt="Icona search">
                                 <span>Cerca</span>
                             </a>
                         </li>
                         <li>
-                            <a class="row align-center gap-small p-sidebar" href="#">
+                            <!-- Libreria -->
+                            <a class="nav-link row align-center gap-small p-sidebar hover-white" href="#">
                                 <img class="nav-icon" src="img/libreria.svg" alt="Icona libreria">
                                 <span>La tua libreria</span>
                             </a>
                         </li>
                     </ul>
                 </nav>
-                <!-- Contenitore delle playlist con grow 1 -->
+                <!-- Contenitore delle playlist -->
                 <div class="grow t-bold column gap-default overflow-hidden">
                     <div class="column gap-default p-sidebar">
-                        <span class="t-white">PLAYLIST</span>
-                        <a class="row align-center gap-default" href="#">
+                        <span class="t-white t-uppercase">Playlist</span>
+                        <!-- Pulsante crea playlist -->
+                        <a class="add-btn-container row align-center gap-default hover-white" href="#">
                             <button class="add-btn">+</button>
                             <span>Crea Playlist</span>
                         </a>
                     </div>
+                    <!-- Lista playlist -->
                     <div class="playlist-container grow">
                         <ul>
-                            <li><a class="p-sidebar" href="#">Nome Playlist</a></li>
-                            <li><a class="p-sidebar" href="#">Nome Playlist</a></li>
-                            <li><a class="p-sidebar" href="#">Nome Playlist</a></li>
-                            <li><a class="p-sidebar" href="#">Nome Playlist</a></li>
-                            <li><a class="p-sidebar" href="#">Nome Playlist</a></li>
-                            <li><a class="p-sidebar" href="#">Nome Playlist</a></li>
-                            <li><a class="p-sidebar" href="#">Nome Playlist</a></li>
+                            <li><a class="p-sidebar hover-white" href="#">Nome Playlist</a></li>
+                            <li><a class="p-sidebar hover-white" href="#">Nome Playlist</a></li>
+                            <li><a class="p-sidebar hover-white" href="#">Nome Playlist</a></li>
+                            <li><a class="p-sidebar hover-white" href="#">Nome Playlist</a></li>
+                            <li><a class="p-sidebar hover-white" href="#">Nome Playlist</a></li>
+                            <li><a class="p-sidebar hover-white" href="#">Nome Playlist</a></li>
+                            <li><a class="p-sidebar hover-white" href="#">Nome Playlist</a></li>
                         </ul>
                     </div>
                 </div>
                 <!-- Utente e Installa app -->
                 <div class="t-bold p-sidebar">
-                    <a class="app-promo row align-center gap-small">
+                    <a class="app-promo row align-center gap-small hover-white" href="#">
                         <img class="download-icon" src="img/download.svg" alt="Icona download">
                         <div>Installa app</div>
                     </a>
-                    <div class="row align-center gap-small t-white">
+                    <a class="row align-center gap-small t-white" href="#">
                         <div class="user-img-container overflow-hidden">
                             <img class="user-img" src="img/profile.svg" alt="Immagine utente">
                         </div>
                         <span>John Doe</span>
-                    </div>
+                    </a>
                 </div>
             </div>
-            <!-- Vero contenuto con grow 1 -->
+            <!-- Vero contenuto -->
             <div class="main-content-container grow">
-                <!-- Barra superiore in fixed -->
-                <div class="top-bar"></div>
+                <!-- Barra superiore -->
+                <div class="top-bar">
+                    <a class="upgrade-btn t-white t-bold t-uppercase" href="#">Effettua l'upgrade</a>
+                </div>
+                <!-- Categorie -->
+                <div class="category-container">
+                    <ul>
+                        <li class="category-name-container">
+                            <a class="category-name active t-bold t-uppercase hover-white" href="#">In evidenza</a>
+                        </li>
+                        <li class="category-name-container">
+                            <a class="category-name t-bold t-uppercase hover-white" href="#">Podcast</a>
+                        </li>
+                        <li class="category-name-container">
+                            <a class="category-name t-bold t-uppercase hover-white" href="#">Classifiche</a>
+                        </li>
+                        <li class="category-name-container">
+                            <a class="category-name t-bold t-uppercase hover-white" href="#">Generi e mood</a>
+                        </li>
+                        <li class="category-name-container">
+                            <a class="category-name t-bold t-uppercase hover-white" href="#">Nuove uscite</a>
+                        </li>
+                        <li class="category-name-container">
+                            <a class="category-name t-bold t-uppercase hover-white" href="#">Scopri</a>
+                        </li>
+                    </ul>
+                </div>
                 <!-- Recently played -->
                 <div></div>
                 <!-- Creato per John Doe -->
@@ -93,20 +123,20 @@
                 <div></div>
             </div>
         </div>
-        <!-- Barra inferiore con i controlli. Lo shrink è 0 per evitare che si schiacci -->
+        <!-- Barra inferiore con i controlli -->
         <div class="bottom-bar no-shrink row space-between align-center">
-            <!-- Contenitore con immagine, nome brano e pulsanti vicini -->
+            <!-- Contenitore con immagine, nome brano e pulsanti -->
             <div class="no-shrink row align-center gap-default">
                 <div>
                     <img class="playing-img" src="img/sinister.jpeg" alt="Sinister OST">
                 </div>
                 <div class="t-bold">
                     <div class="t-white">Sinister</div>
-                    <div class="artist-name">Brano Nome</div>
+                    <a class="artist-name hover-white">Nome Artista</a>
                 </div>
                 <div class="row icon-size-default gap-default">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-regular fa-folder"></i>
+                    <i class="fa-regular fa-heart hover-white"></i>
+                    <i class="fa-regular fa-folder hover-white"></i>
                 </div>
             </div>
             <!-- Contenitore dei controlli audio -->
@@ -115,7 +145,7 @@
                 <div class="row justify-center align-center gap-big t-white icon-size-big">
                     <i class="fa-solid fa-shuffle"></i>
                     <i class="fa-solid fa-backward-step"></i>
-                    <i class="fa-regular fa-circle-play icon-size-bigger"></i>
+                    <i class="play-btn fa-regular fa-circle-play icon-size-bigger"></i>
                     <i class="fa-solid fa-forward-step"></i>
                     <i class="fa-solid fa-rotate-right"></i>
                 </div>
@@ -123,7 +153,9 @@
                 <div class="row align-center gap-big">
                     <div class="t-white">0:25</div>
                     <div class="bar grow">
-                        <div class="bar-progress"></div>
+                        <div class="bar-progress">
+                            <div class="bar-progress-circle"></div>
+                        </div>
                     </div>
                     <div class="t-white">4:35</div>
                 </div>
@@ -136,7 +168,9 @@
                     <i class="fa-solid fa-volume-high"></i>
                 </div>
                 <div class="bar volume-bar">
-                    <div class="bar-progress"></div>
+                    <div class="bar-progress">
+                        <div class="bar-progress-circle"></div>
+                    </div>
                 </div>
             </div>
         </div>
