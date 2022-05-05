@@ -17,6 +17,16 @@ a {
     text-decoration: none;
 }
 
+button {
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    background: none;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
 ul {
     list-style: none;
 }
@@ -41,6 +51,10 @@ ul {
 
 .overflow-hidden {
     overflow: hidden;
+}
+
+.clickable {
+    display: block;
 }
 
 .icon-size-default {
@@ -107,8 +121,12 @@ ul {
     gap: 2rem;
 }
 
-.col-30 {
+.col-3 {
     flex-basis: calc( 100% / 3 );
+}
+
+.col-6 {
+    flex-basis: calc( ( 100% / 6 ) - ( ( 1rem / 6 ) * 5 ) );
 }
 
 /* GENERALI */
@@ -126,8 +144,35 @@ ul {
     padding: 1rem 0;
 }
 
+.sidebar-spacing {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.sidebar .clickable {
+    padding: 0.5rem 1.5rem;
+}
+
 .logo-img {
     width: 80%;
+}
+
+.nav-link.active {
+    position: relative;
+    color: white;
+}
+
+.nav-link.active:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-left: 6px solid #ADFF2F;
+}
+
+.nav-link.active .nav-icon {
+    filter: opacity(1);
 }
 
 .nav-link:hover .nav-icon {
@@ -142,12 +187,12 @@ ul {
 .add-btn {
     display: inline-block;
     width: 50px;
-    height: 50px;
+    text-align: center;
+    line-height: 50px;
     font-size: 2.8rem;
     background-color: rgba(255, 255, 255, 0.4);
     color: black;
     border: none;
-    cursor: pointer;
 }
 
 .add-btn-container:hover .add-btn {
@@ -159,9 +204,12 @@ ul {
 }
 
 .app-promo {
-    padding: 0.5rem 0;
     border-bottom: 2px solid rgba(255, 255, 255, 0.4);
     margin-bottom: 1rem;
+}
+
+.app-promo.clickable, .user.clickable {
+    padding: 0.5rem 0;
 }
 
 .app-promo:hover .download-icon {
@@ -185,11 +233,11 @@ ul {
 
 /* TOP BAR */
 
-/* NEEDS FIXEEEEEEEEEEEEEEEEEEEEEEED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .top-bar {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 2rem;
     text-align: right;
+    position: sticky;
 }
 
 .upgrade-btn {
@@ -208,30 +256,94 @@ ul {
 
 .main-content-container {
     background-color: #141922;
+    overflow: auto;
 }
 
-.category-container {
+.categories-container {
     text-align: center;
 }
 
-.category-name-container {
+.category-container {
     display: inline-block;
+}
+
+.categories-container .clickable {
     padding: 1rem;
 }
 
-.category-name {
+.category {
     font-size: 0.9rem;
     position: relative;
 }
 
-.category-name.active:before {
+.category.active {
+    color: white;
+}
+
+.category.active:before {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: -0.3rem;
+    bottom: 0.5rem;
     transform: translate(-50%, 0%);
     width: calc( 100% / 3 );
     border: 1px solid #ADFF2F;
+}
+
+.section {
+    padding: 1rem 2rem 2rem 1.5rem;
+}
+
+.section-title {
+    font-size: 1.8rem;
+}
+
+.section-subtitle {
+    margin-top: 0.5rem;
+}
+
+.section-row {
+    padding-top: 2rem;
+}
+
+.album-container:hover .play-album {
+    display: flex;
+}
+
+.album-img-container {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.album-img-container-round {
+    border-radius: 50%;
+}
+
+.album-img {
+    width: 100%;
+    display: block;
+}
+
+.play-album {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 4rem;
+    display: none;
+}
+
+.album-title {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.album-subtitle {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0.5rem;
 }
 
 /* BOTTOM BAR */
@@ -241,8 +353,8 @@ ul {
     padding: 0 1rem;
 }
 
-.bottom-bar i {
-    cursor: pointer;
+.bottom-bar .clickable {
+    padding: 0.5rem;
 }
 
 .playing-img {
@@ -256,6 +368,12 @@ ul {
 
 .artist-name:hover {
     text-decoration: underline;
+    cursor: pointer;
+}
+
+.controls .clickable {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .play-btn:hover {
