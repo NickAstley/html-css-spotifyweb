@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <meta name="description" content="Esercizio di riproduzione di Spotify">
+    <meta name="keywords" content="Spotify, esercizio, webapp">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/bonus-style.css">
+</head>
+<body>
+    <!-- Contenitore 100vh -->
+    <div class="app-container column">
+        <!-- Blocco superiore -->
+        <div class="grow row overflow-hidden">
+            <!-- Sidebar -->
+            <div class="sidebar no-shrink column gap-big">
+                <!-- Logo -->
+                <div class="sidebar-spacing">
+                    <img class="logo-img small-sidebar-display-none" src="img/logo.svg" alt="Logo Spotify">
+                    <img class="logo-img-small display-none small-sidebar-display" src="img/logo-small.svg" alt="Logo Spotify">
+                </div>
+                <!-- Menu di navigazione -->
+                <nav class="grow-small">
+                    <ul class="t-bold">
+                        <li>
+                            <!-- Home -->
+                            <a class="clickable nav-link active row align-center gap-small hover-white" href="#">
+                                <img class="nav-icon" src="img/home.svg" alt="icona Home">
+                                <span class="small-sidebar-display-none">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- Cerca -->
+                            <a class="clickable nav-link row align-center gap-small hover-white" href="#">
+                                <img class="nav-icon" src="img/search.svg" alt="Icona search">
+                                <span class="small-sidebar-display-none">Cerca</span>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- Libreria -->
+                            <a class="clickable nav-link row align-center gap-small hover-white" href="#">
+                                <img class="nav-icon" src="img/libreria.svg" alt="Icona libreria">
+                                <span class="small-sidebar-display-none">La tua libreria</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Contenitore delle playlist -->
+                <div class="grow t-bold column gap-default overflow-hidden small-sidebar-display-none">
+                    <div class="column gap-default">
+                        <div class="sidebar-spacing t-white t-uppercase">Playlist</div>
+                        <!-- Pulsante crea playlist -->
+                        <button class="add-btn-container clickable row align-center gap-default hover-white" href="#">
+                            <div class="add-btn">+</div>
+                            <span>Crea Playlist</span>
+                        </button>
+                    </div>
+                    <!-- Lista playlist -->
+                    <div class="playlist-container grow">
+                        <ul>
+                            <li><a class="clickable hover-white" href="#">Nome Playlist</a></li>
+                            <li><a class="clickable hover-white" href="#">Nome Playlist</a></li>
+                            <li><a class="clickable hover-white" href="#">Nome Playlist</a></li>
+                            <li><a class="clickable hover-white" href="#">Nome Playlist</a></li>
+                            <li><a class="clickable hover-white" href="#">Nome Playlist</a></li>
+                            <li><a class="clickable hover-white" href="#">Nome Playlist</a></li>
+                            <li><a class="clickable hover-white" href="#">Nome Playlist</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Utente e Installa app -->
+                <div class="sidebar-spacing t-bold">
+                    <a class="clickable app-promo row align-center gap-small hover-white" href="#">
+                        <img class="download-icon" src="img/download.svg" alt="Icona download">
+                        <div class="small-sidebar-display-none">Installa app</div>
+                    </a>
+                    <a class="user clickable row align-center gap-small t-white" href="#">
+                        <div class="user-img-container overflow-hidden">
+                            <img class="user-img" src="img/profile.svg" alt="Immagine utente">
+                        </div>
+                        <span class="small-sidebar-display-none">John Doe</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Vero contenuto -->
+            <div class="main-content-container grow">
+                <!-- Barra superiore -->
+                <div class="top-bar">
+                    <a class="upgrade-btn t-white t-bold t-uppercase" href="#">Effettua l'upgrade</a>
+                </div>
+                <!-- Categorie -->
+                <div class="categories-container">
+                    <ul>
+                        <li class="category-container">
+                            <a class="clickable category active t-bold t-uppercase hover-white" href="#">In evidenza</a>
+                        </li>
+                        <li class="category-container">
+                            <a class="clickable category t-bold t-uppercase hover-white" href="#">Podcast</a>
+                        </li>
+                        <li class="category-container">
+                            <a class="clickable category t-bold t-uppercase hover-white" href="#">Classifiche</a>
+                        </li>
+                        <li class="category-container">
+                            <a class="clickable category t-bold t-uppercase hover-white" href="#">Generi e mood</a>
+                        </li>
+                        <li class="category-container">
+                            <a class="clickable category t-bold t-uppercase hover-white" href="#">Nuove uscite</a>
+                        </li>
+                        <li class="category-container">
+                            <a class="clickable category t-bold t-uppercase hover-white" href="#">Scopri</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Recently played -->
+                <div class="section">
+                    <div class="section-title t-bold t-white">Recently played</div>
+                    <div class="row section-row gap-default overflow-auto-large">
+                        <div class="col-6 col-fixed">
+                            <a class="album-container" href="#">                      
+                                <div class="album-img-container">
+                                    <img class="album-img" src="img/metal_lifting.jpg" alt="Heavy Metal">
+                                    <div class="play-album justify-center align-center t-white">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="album-title t-bold t-white">Heavy Metal</div>
+                                    <div class="album-subtitle">Subtitle</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-fixed">
+                            <a class="album-container" href="#">
+                                <div class="album-img-container">
+                                    <img class="album-img" src="img/stranger.jpeg" alt="Stranger Things - OST">
+                                    <div class="play-album justify-center align-center t-white">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="album-title t-bold t-white">Stranger Things, Vol.1(a Netflix Original Series Soundtrack)</div>
+                                    <div class="album-subtitle">Kyle Dixon & Michael Stein</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-fixed">
+                            <a class="album-container" href="#">
+                                <div class="album-img-container">
+                                    <img class="album-img" src="img/aquietplace.jpeg" alt="A Quiet Place - OST">
+                                    <div class="play-album justify-center align-center t-white">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="album-title t-bold t-white">A quiet place</div>
+                                    <div class="album-subtitle">Subtitle</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-fixed">
+                            <a class="album-container" href="#">
+                                <div class="album-img-container">
+                                    <img class="album-img" src="img/split.jpeg" alt="Split - OST">
+                                    <div class="play-album justify-center align-center t-white">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="album-title t-bold t-white">Split</div>
+                                    <div class="album-subtitle">Subtitle</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-fixed">
+                            <a class="album-container" href="#">
+                                <div class="album-img-container">
+                                    <img class="album-img" src="img/cure.jpeg" alt="A cure for wellness - OST">
+                                    <div class="play-album justify-center align-center t-white">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="album-title t-bold t-white">A cure for wellness</div>
+                                    <div class="album-subtitle">Subtitle</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-fixed">
+                            <a class="album-container" href="#">
+                                <div class="album-img-container">
+                                    <img class="album-img" src="img/sinister.jpeg" alt="Sinister - OST">
+                                    <div class="play-album justify-center align-center t-white">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="album-title t-bold t-white">Sinister</div>
+                                    <div class="album-subtitle">Subtitle</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Creato per John Doe -->
+                <div class="section">
+                    <div class="section-title t-bold t-white">Creato per John Doe</div>
+                    <div class="section-subtitle t-bold">Più ascolti, più accurati saranno i suggerimenti.</div>
+                    <div class="row section-row gap-default overflow-auto-large">
+                        <div class="col-6 col-fixed">
+                            <a class="album-container" href="#">                      
+                                <div class="album-img-container">
+                                    <img class="album-img" src="img/radar.jpeg" alt="Release radar">
+                                    <div class="play-album justify-center align-center t-white">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="album-title t-bold t-white">Release Radar</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-fixed">
+                            <a class="album-container" href="#">
+                                <div class="album-img-container">
+                                    <img class="album-img" src="img/mixdaily.jpeg" alt="Daily mix 1">
+                                    <div class="play-album justify-center align-center t-white">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="album-title t-bold t-white">Daily Mix 1</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Artisti più popolari -->
+                <div class="section">
+                    <div class="section-title t-bold t-white">Artisti più popolari</div>
+                    <div class="section-subtitle t-bold">Più ascolti, più accurati saranno i suggerimenti.</div>
+                    <div class="row section-row gap-default overflow-auto-large">
+                        <div class="col-6 col-fixed">
+                            <a class="album-container" href="#">                      
+                                <div class="album-img-container album-img-container-round overflow-hidden">
+                                    <img class="album-img" src="img/youg.jpeg" alt="Lana del Rey">
+                                    <div class="play-album justify-center align-center t-white">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="album-title t-bold t-white">Lana del Rey</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-fixed">
+                            <a class="album-container" href="#">
+                                <div class="album-img-container album-img-container-round overflow-hidden">
+                                    <img class="album-img" src="img/einaudi.jpeg" alt="Einaudi">
+                                    <div class="play-album justify-center align-center t-white">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="album-title t-bold t-white">Einaudi</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Barra inferiore con i controlli -->
+        <div class="bottom-bar no-shrink row space-between align-center">
+            <!-- Contenitore con immagine, nome brano e pulsanti -->
+            <div class="no-shrink row align-center gap-default">
+                <div>
+                    <img class="playing-img" src="img/sinister.jpeg" alt="Sinister OST">
+                </div>
+                <div class="song-info t-bold">
+                    <div class="t-white">Sinister</div>
+                    <a class="artist-name hover-white"><span>Nome</span> <span class="new-line">Artista</span></a>
+                </div>
+                <div class="song-actions row icon-size-default column-large">
+                    <button class="clickable">
+                        <i class="fa-regular fa-heart hover-white"></i>
+                    </button>
+                    <button class="clickable">
+                        <i class="fa-regular fa-folder hover-white"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Contenitore dei controlli audio -->
+            <div class="column col-3">
+                <!-- Riga superiore -->
+                <div class="controls row justify-center align-center gap-default t-white icon-size-big gap-md-no-gap">
+                    <button class="clickable">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </button>
+                    <button class="clickable">
+                        <i class="fa-solid fa-backward-step"></i>
+                    </button>
+                    <button class="clickable">
+                        <i class="play-btn fa-regular fa-circle-play icon-size-bigger"></i>
+                    </button>
+                    <button class="clickable">
+                        <i class="fa-solid fa-forward-step"></i>
+                    </button>
+                    <button class="clickable">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+                </div>
+                <!-- Riga inferiore -->
+                <div class="row align-center gap-big gap-small-default">
+                    <div class="t-white">0:25</div>
+                    <div class="bar grow">
+                        <div class="bar-progress">
+                            <div class="bar-progress-circle"></div>
+                        </div>
+                    </div>
+                    <div class="t-white">4:35</div>
+                </div>
+            </div>
+            <!-- Contenitore dello slider del volume e pulsanti vicini -->
+            <div class="no-shrink row align-center gap-default">
+                <div class="row t-white icon-size-default">
+                    <div class="row column-md">
+                        <button class="clickable">
+                            <i class="fa-solid fa-list-ul"></i>
+                        </button>
+                        <button class="clickable">
+                            <i class="fa-solid fa-display"></i>
+                        </button>
+                    </div>
+                    <button class="clickable">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </button>
+                </div>
+                <div class="bar volume-bar">
+                    <div class="bar-progress">
+                        <div class="bar-progress-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
