@@ -1,0 +1,97 @@
+/* UTILITIES */
+
+.t-white {
+    color: white;
+}
+
+.t-bold {
+    font-weight: 700;
+}
+
+.t-uppercase {
+    text-transform: uppercase;
+}
+
+.hover-white:hover {
+    color: white;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.clickable {
+    display: block;
+}
+
+.icon-size-default {
+    font-size: 1.2rem;
+}
+
+.icon-size-big {
+    font-size: 1.5rem;
+}
+
+.icon-size-bigger {
+    font-size: 2.5rem;
+}
+
+.p-sidebar {
+    display: block;
+    padding: 0.5rem 1.5rem;
+}
+
+.display-none {
+    display: none;
+}
+
+/* FLEX */
+
+.row {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.no-shrink {
+    flex-shrink: 0;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.gap-default {
+    gap: 1rem;
+}
+
+.gap-small {
+    gap: 0.5rem;
+}
+
+.gap-big {
+    gap: 2rem;
+}
+
+.col-3 {
+    flex-basis: calc( 100% / 3 );
+}
+
+.col-6 {
+    flex-basis: calc( ( 100% / 6 ) - ( ( 1rem / 6 ) * 5 ) );
+}

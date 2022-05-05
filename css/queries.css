@@ -1,0 +1,111 @@
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1100px) {
+    .wrap-large {
+        flex-wrap: wrap;
+    }
+    
+    .col-4 {
+        flex-basis: calc( 25% - ( ( 1rem / 4 ) * 3 ) );
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .column-large {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .album-title, .album-subtitle {
+        word-break: break-all;
+    }
+
+    .song-actions {
+        display: none;
+    }
+
+    .volume-bar {
+        width: 75px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .new-line {
+        display: block;
+    }
+
+    .column-md {
+        flex-direction: column;
+    }
+
+    .gap-md-no-gap {
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .col-2 {
+        flex-basis: calc( 50% - ( 1rem / 2 ) );
+    }
+
+    .album-title, .album-subtitle {
+        word-break: keep-all;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .volume-bar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar {
+        flex-basis: unset;
+        align-items: center;
+    }
+
+    .sidebar .clickable {
+        padding: 0.5rem;
+    }
+
+    .sidebar-spacing {
+        padding: 0;
+    }
+
+    .small-sidebar-display-none {
+        display: none;
+    }
+    
+    .small-sidebar-display {
+        display: inline-block;
+    }
+
+    .grow-small {
+        flex-grow: 1;
+    }
+    
+    .bottom-bar {
+        padding-left: 0;
+    }
+
+    .song-info {
+        display: none;
+    }
+
+    .playing-img {
+        padding: 0;
+        width: 128px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .controls .clickable {
+        padding: 0.5rem 0.8rem;
+    }
+
+    .gap-small-default {
+        gap: 1rem;
+    }
+}
